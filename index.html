@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fyle: Income Tax Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Income Tax Calculator</h1>
+    <form id="taxCalculatorForm">
+      <div class="inputField">
+        <label for="grossIncome">Enter gross annual income <span class="tooltip" tooltip="Gross annual income is your total salary in a year before any deductions">?</span></label>
+        <input type="text" id="grossIncome" placeholder="Enter gross annual income">
+        <span class="errorIcon" tooltip="Please enter numbers only"></span>
+      </div>
+      <div class="inputField">
+        <label for="extraIncome">Enter extra income <span class="tooltip" tooltip="Income from other sources">?</span></label>
+        <input type="text" id="extraIncome" placeholder="Enter extra income from other sources">
+        <span class="errorIcon" tooltip="Please enter numbers only"></span>
+      </div>
+      <div class="inputField">
+        <label for="ageGroup">Enter age group</label>
+        <select id="ageGroup">
+          <option value="" selected disabled>Select age group</option>
+          <option value="1">Below 40</option>
+          <option value="2">40 to 59</option>
+          <option value="3">60 and above</option>
+        </select>
+      </div>
+      <div class="inputField">
+        <label for="deductions">Enter total applicable deductions <span class="tooltip" tooltip="Total deductions you can claim">?</span></label>
+        <input type="text" id="deductions" placeholder="Add total applicable deductions">
+        <span class="errorIcon" tooltip="Please enter numbers only"></span>
+      </div>
+      <button type="button" id="calculateBtn">Calculate Tax</button>
+      <div id="result"></div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
